@@ -1,0 +1,25 @@
+server:
+  port: 3000
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:myapp-test;
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        jdbc:
+          time_zone: UTC
+    open-in-view: false
+  data:
+    redis:
+      host: 192.168.0.5
+      entry-ttl-minutes: 10
+      cache-prefix: "spring:cache:"

@@ -14,8 +14,7 @@
 
 
 ### 2. cookie
-- set cookie
-
+- handle cookie
 
 ### 3. redis
 - session with redis
