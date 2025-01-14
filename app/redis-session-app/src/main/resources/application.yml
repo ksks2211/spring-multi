@@ -1,0 +1,12 @@
+server:
+  port: 3000
+spring:
+  data:
+    redis:
+      host: 192.168.0.5
+  session:
+    timeout: 5m
+    redis:
+      namespace: "spring:session:"
+
+

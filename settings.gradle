@@ -1,0 +1,14 @@
+rootProject.name = 'multi'
+
+
+def includeSubProjects(String parentDir) {
+    file(parentDir).eachDir { dir ->
+        include("${parentDir.replace('/', ':')}:${dir.name}")
+    }
+}
+
+includeSubProjects('app')
+
+includeSubProjects('domain')
+
+

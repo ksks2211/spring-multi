@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.0.5:3306/mydb
+    username: myuser
+    password: dbsdud12
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    open-in-view: false
+auth:
+  refresh-token:
+    exp-hours: 12
+    name: RefreshToken
+  jwt:
+    auth-exp-minutes: 30
+    secret-key: JwtSecretKey
+    issuer: JwtIssuer
