@@ -37,6 +37,7 @@ public class PostService {
         this.postsCache = cacheManager.getCache(CACHE_NAME);
     }
 
+    @CachePut(value=CACHE_NAME, key="#result.id")
     public PostDto createPost(String title, String content){
         Post post = Post.builder().title(title).content(content).build();
         Post savedPost = postRepository.save(post);
@@ -45,7 +46,7 @@ public class PostService {
         log.info("PostDto : {}", postDto);
 
 
-        postsCache.put(postDto.getId(),postDto);
+//        postsCache.put(postDto.getId(),postDto);
         return postDto;
     }
 
@@ -57,7 +58,7 @@ public class PostService {
     }
 
 
-    @CachePut(value=CACHE_NAME, key="#id")
+    @CachePut(value=CACHE_NAME, key="#result.id")
     public PostDto updatePost(Long id, String title, String content){
         Post post = postRepository.findById(id).orElseThrow(()-> new PostNotFoundException("Post Not Found"));
         post.setContent(content);

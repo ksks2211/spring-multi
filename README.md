@@ -6,19 +6,26 @@
 ## Overview
 
 ### 1. security
-- basic login
-- form login
-- jwt login
-- refresh
-- oauth2
-
+- [x] basic login
+- [x] form login
+- [x] jwt login
+- [x] refresh token
+- [x] oauth2
 
 ### 2. cookie
-- handle cookie
+- [x] handle cookie
 
 ### 3. redis
-- session with redis
-- redisTemplate, RedisHash
-- cache with redis
+- [x] session with redis
+- [x] redisTemplate, RedisHash
+- [x] cache with redis
+
+
+### 4. logging
+- [ ] log to file
+- [ ] log json format
+- [ ] 
+
+### 5. 
 
 
